@@ -14,7 +14,7 @@ namespace MQ
         {
             var config = new Dictionary<string, object>
             {
-                { "bootstrap.servers", "192.168.2.17:9092" }
+                { "bootstrap.servers", "localhost:9092" }
             };
 
             using (var producer = new Producer<string, string>(config, new StringSerializer(Encoding.UTF8), new StringSerializer(Encoding.UTF8)))
