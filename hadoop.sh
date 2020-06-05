@@ -76,7 +76,7 @@ cat >> $HADOOP_HOME/etc/hadoop/core-site.xml <<EOT
      </property>
 	 <property>
         <name>hadoop.tmp.dir</name>
-        <value>file:/usr/local/hadoop/data/tmp</value>
+        <value>file:/data/hadoop/tmp</value>
         <description>Abase for other temporary directories.</description>
     </property>
 </configuration>
@@ -93,6 +93,10 @@ cat >> $HADOOP_HOME/etc/hadoop/hdfs-site.xml <<EOT
          <name>dfs.permissions.enabled</name>
          <value>false</value>
       </property>
+      <property>  
+    	<name>dfs.namenode.name.dir</name>  
+    	<value>file:/data/hadoop/dfs/name</value>  
+      </property>  
 </configuration>
 EOT
 
